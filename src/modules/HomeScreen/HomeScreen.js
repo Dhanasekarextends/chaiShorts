@@ -22,7 +22,7 @@ import {
   handleDashboardApiResults,
 } from '../../utils/utils';
 import widgetDummy from '../../model/widgetDummy';
-import ShortsPlayer from '../../components/VerticalShortsPlayer';
+import ShortsPlayerScreen from '../ShortsPlayer/ShortsPlayer';
 
 export default function HomeScreen() {
   const [widgetsLoading, setWidgetsLoading] = useState(true);
@@ -61,13 +61,6 @@ export default function HomeScreen() {
           discoverShortsWidget,
           featuredCreatorsWidget,
         } = widgetDummy.widgets;
-        console.log('API Response:', {
-          widgetDummy,
-          continueWatchingItems,
-          categoryRows,
-          discoverShortsWidget,
-          featuredCreatorsWidget,
-        });
         setContinueWatchingItems(continueWatchingItems.items || []);
         setCategoryRows(categoryRows || []);
         setDiscoverShortsWidgetData(discoverShortsWidget || []);
@@ -168,7 +161,7 @@ export default function HomeScreen() {
           <Text style={styles.closeButton} onPress={closeModal}>
             ✕
           </Text>
-          <ShortsPlayer data={currentShortsData} />
+          <ShortsPlayerScreen data={currentShortsData} />
         </View>
       </Modal>
     );

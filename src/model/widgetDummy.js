@@ -10,15 +10,19 @@ export default {
           seriesId: 'f1a8fcbf36e044bfaa406eebffefd36e',
           episodeNumber: 3,
           progress: 87,
-          progressTime: 61, // seconds into this episode
+          progressTime: 61,
           image:
             'https://occ-0-2041-3662.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABTY_oFMWa4w_MOegHro1RQFJygb7yu6ECJNjt0DIKOAEA00qkrtT2db1NM6RKMyEuhv4LPUrF96wCiAEvoSewxNHpcLSAQvrnr4.webp?r=c69',
           title: 'Minute Magic',
           episodeTitle: 'How Rainbows Form',
+          tagline: 'Big science, tiny time!',
           seasonNumber: 1,
           subscriptionTier: 'free',
           videoUri:
             'https://videos.pexels.com/video-files/4678261/4678261-hd_1080_1920_25fps.mp4',
+          duration: 62,
+          thumbnail:
+            'https://media.gettyimages.com/id/1472616738/video/loading-green-circle-icon-on-alpha-channel-background-animation-vertical-9-16-format-smart.jpg?s=640x640&k=20&c=OpGCY9JHbb-nYNHGZS9uVT25CZIZF4jS3I1H30tZ18Q=',
           lastWatchedAt: '2024-07-29T10:09:10Z',
         },
         // Standalone short
@@ -28,11 +32,15 @@ export default {
           image:
             'https://occ-0-2041-3662.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYstWSrea_lL8g7-wOCuu2Knms2Gjf0LTvZhkWq__5Lec5JnoohcKvRTXHXN0dfj7PccZ7U9pcQ2AOJH6dx-GydOx1dX38QcmmM.webp?r=75b',
           title: 'Code in 60 Seconds',
+          tagline: 'Master a trick in a minute!',
           progress: 100,
           progressTime: 60,
           subscriptionTier: 'pro',
           videoUri:
             'https://videos.pexels.com/video-files/4678261/4678261-hd_1080_1920_25fps.mp4',
+          duration: 60,
+          thumbnail:
+            'https://media.gettyimages.com/id/1472616738/video/loading-green-circle-icon-on-alpha-channel-background-animation-vertical-9-16-format-smart.jpg?s=640x640&k=20&c=OpGCY9JHbb-nYNHGZS9uVT25CZIZF4jS3I1H30tZ18Q=',
           lastWatchedAt: '2024-07-29T11:01:00Z',
         },
       ],
@@ -50,29 +58,33 @@ export default {
             image:
               'https://occ-0-2041-3662.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABWnLE3GO0IoZDxcYP4RNTiQjDbCH1Q5IaFrptOJP3uhS89tCWue1UFeWYdy5u61vl3rGy1fzFL7hPHpTKkHP1pos9TrXJuA7pnU.webp?r=e4d',
             title: 'Minute Magic',
-            tagline: 'Bite-size Science Explainers',
+            tagline: 'Big impact in little clips!',
             shorts: [
               {
                 seriesId: 'f1a8fcbf36e044bfaa406eebffefd36e',
-
                 id: '7e1bc79fff6144e7bb92e00b594a65404',
                 videoUri:
                   'https://videos.pexels.com/video-files/4678261/4678261-hd_1080_1920_25fps.mp4',
                 episodeNumber: 1,
                 title: 'Air Pressure in a Glass',
+                tagline: 'Science at your fingertips.',
                 seasonNumber: 1,
                 duration: 62,
+                thumbnail:
+                  'https://media.gettyimages.com/id/1472616738/video/loading-green-circle-icon-on-alpha-channel-background-animation-vertical-9-16-format-smart.jpg?s=640x640&k=20&c=OpGCY9JHbb-nYNHGZS9uVT25CZIZF4jS3I1H30tZ18Q=',
               },
               {
                 seriesId: 'f1a8fcbf36e044bfaa406eebffefd36e',
-
                 id: '7e1bc79fff6144e7bb92e00b594a65403',
                 videoUri:
                   'https://videos.pexels.com/video-files/4434242/4434242-uhd_1440_2560_24fps.mp4',
                 episodeNumber: 2,
                 title: 'Gravity Drop Demo',
+                tagline: 'Physics falls into place!',
                 seasonNumber: 1,
                 duration: 58,
+                thumbnail:
+                  'https://media.gettyimages.com/id/1472616738/video/loading-green-circle-icon-on-alpha-channel-background-animation-vertical-9-16-format-smart.jpg?s=640x640&k=20&c=OpGCY9JHbb-nYNHGZS9uVT25CZIZF4jS3I1H30tZ18Q=',
               },
             ],
           },
@@ -82,29 +94,33 @@ export default {
             image:
               'https://occ-0-2041-3662.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABZbwxFGCqW08vgMocRcj8spLhTTZnpooMHRR29KNJPyVVK-iHwmVyp-FddoE6_qrL9h7O-xi9ZusyEssewrn1vqnHQ4XFTqsiTCkLzi6n7GB8E_ZCbtJXI-YOj_17MFlShrR.jpg?r=7ec',
             title: 'Science in a Snap',
-            tagline: 'One concept per minute',
+            tagline: 'One concept. One minute. Always awesome.',
             shorts: [
               {
                 seriesId: '7e1bc79fff6144e7bb92e00b594a6540',
-
                 id: '7e1bc79fff6144e7bb92e00b594a65401',
                 videoUri:
                   'https://videos.pexels.com/video-files/4678261/4678261-hd_1080_1920_25fps.mp4',
                 episodeNumber: 1,
                 title: 'Molecules Move!',
+                tagline: 'See atoms in action.',
                 seasonNumber: 1,
                 duration: 55,
+                thumbnail:
+                  'https://media.gettyimages.com/id/1472616738/video/loading-green-circle-icon-on-alpha-channel-background-animation-vertical-9-16-format-smart.jpg?s=640x640&k=20&c=OpGCY9JHbb-nYNHGZS9uVT25CZIZF4jS3I1H30tZ18Q=',
               },
               {
-                seriesId: 'f1a8fcbf36e044bfaa406eebffefd36e',
-
+                seriesId: '7e1bc79fff6144e7bb92e00b594a6540',
                 id: '7e1bc79fff6144e7bb92e00b594a65402',
                 videoUri:
                   'https://videos.pexels.com/video-files/4434242/4434242-uhd_1440_2560_24fps.mp4',
                 episodeNumber: 2,
                 title: 'Gravity Drop Demo',
+                tagline: 'Instant gravity science!',
                 seasonNumber: 1,
                 duration: 58,
+                thumbnail:
+                  'https://media.gettyimages.com/id/1472616738/video/loading-green-circle-icon-on-alpha-channel-background-animation-vertical-9-16-format-smart.jpg?s=640x640&k=20&c=OpGCY9JHbb-nYNHGZS9uVT25CZIZF4jS3I1H30tZ18Q=',
               },
             ],
           },
@@ -121,8 +137,12 @@ export default {
             image:
               'https://occ-0-2041-3662.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABe9u0MfXau6hIjEoeE48IxAmwXjEnbYbCk5mlPA4Y1fLvENTeZ3CAD5giKQaamh8viznjv2n7FygoP_YYybNUcmvm-TnuTsWhoLIeKJceFkbCrJk3871ovdvsbkxa-uZKMl4.jpg?r=400',
             title: 'AI Explained in 59s',
+            tagline: 'Tech made simple!',
             videoUri:
               'https://videos.pexels.com/video-files/4678261/4678261-hd_1080_1920_25fps.mp4',
+            duration: 59,
+            thumbnail:
+              'https://media.gettyimages.com/id/1472616738/video/loading-green-circle-icon-on-alpha-channel-background-animation-vertical-9-16-format-smart.jpg?s=640x640&k=20&c=OpGCY9JHbb-nYNHGZS9uVT25CZIZF4jS3I1H30tZ18Q=',
           },
           {
             type: 'shortStandalone',
@@ -130,8 +150,12 @@ export default {
             image:
               'https://occ-0-2041-3662.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABVhr_pvD_nVEmKOOwzMp0wrKSLAS4WWQBsWCsg-28OVYwcp9x0MXq2U3EMppz2Ood62J57FDYxaOuwAFBXlZN4ZrNOQ8n1URDVI.webp?r=65f',
             title: 'Quick CSS Grid Hack',
+            tagline: 'Fast tricks for fast coders.',
             videoUri:
               'https://videos.pexels.com/video-files/4678261/4678261-hd_1080_1920_25fps.mp4',
+            duration: 65,
+            thumbnail:
+              'https://media.gettyimages.com/id/1472616738/video/loading-green-circle-icon-on-alpha-channel-background-animation-vertical-9-16-format-smart.jpg?s=640x640&k=20&c=OpGCY9JHbb-nYNHGZS9uVT25CZIZF4jS3I1H30tZ18Q=',
           },
         ],
       },
@@ -146,16 +170,20 @@ export default {
             image:
               'https://occ-0-2041-3662.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABa5BCf6HoCBQCEQW5JNP301dwSPyJPEXbFicrHodTtnqA1AtzHfQyEfkHWQurDLPdc9Eq4LszcOs9gzzykJ3FvNwjhX2B7KLteY.webp?r=edfg',
             title: 'Data Science Bites',
-            tagline: 'Quick Data Know-How',
+            tagline: 'Crunch data in a flash!',
             shorts: [
               {
                 seriesId: '25c1ee94b349404b8eacd51da8f43e31',
                 videoUri:
                   'https://videos.pexels.com/video-files/4678261/4678261-hd_1080_1920_25fps.mp4',
                 episodeNumber: 1,
+                id: 'b1',
                 title: 'What is Regression?',
+                tagline: 'Learn stats instantly.',
                 seasonNumber: 1,
                 duration: 67,
+                thumbnail:
+                  'https://media.gettyimages.com/id/1472616738/video/loading-green-circle-icon-on-alpha-channel-background-animation-vertical-9-16-format-smart.jpg?s=640x640&k=20&c=OpGCY9JHbb-nYNHGZS9uVT25CZIZF4jS3I1H30tZ18Q=',
               },
             ],
           },
@@ -165,8 +193,12 @@ export default {
             image:
               'https://occ-0-2041-3662.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYOSv2XJhtOOxZoDqYpV6u0SCSDe7-CoptcE7d7C-mQG1S8zXfN-XNDIqKk76UVniPM5fHO6rSQJLwK7GURCu11d0Tgv7JKu4NM.webp?r=722',
             title: 'What is a Neural Net?',
+            tagline: 'Neural networks, no math.',
             videoUri:
               'https://videos.pexels.com/video-files/4678261/4678261-hd_1080_1920_25fps.mp4',
+            duration: 66,
+            thumbnail:
+              'https://media.gettyimages.com/id/1472616738/video/loading-green-circle-icon-on-alpha-channel-background-animation-vertical-9-16-format-smart.jpg?s=640x640&k=20&c=OpGCY9JHbb-nYNHGZS9uVT25CZIZF4jS3I1H30tZ18Q=',
           },
         ],
       },
