@@ -28,7 +28,7 @@ const CategoryRowSection: React.FC<{
         renderItem={({ item }) => (
           <TouchableOpacity
             style={styles.item}
-            onPress={() => onPressItem(item)}
+            onPress={() => onPressItem([item])}
             activeOpacity={0.85}
           >
             <Image source={{ uri: item.image }} style={styles.image} />

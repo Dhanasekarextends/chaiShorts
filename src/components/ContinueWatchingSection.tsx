@@ -18,7 +18,6 @@ const ContinueWatchingSection: React.FC<{
   items: HomeContentItem[];
   onPressItem: (item: HomeContentItem) => void;
 }> = ({ items, onPressItem }) => {
-  console.log('ContinueWatchingSection items:', items);
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Continue Watching</Text>
@@ -30,7 +29,7 @@ const ContinueWatchingSection: React.FC<{
         renderItem={({ item }) => (
           <TouchableOpacity
             style={styles.item}
-            onPress={() => onPressItem(item)}
+            onPress={() => onPressItem([item])}
             activeOpacity={0.85}
           >
             <Image source={{ uri: item.image }} style={styles.image} />

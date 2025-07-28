@@ -41,7 +41,7 @@ const BannersCarousel: React.FC<BannersCarouselProps> = ({
             { marginRight: index === items.length - 1 ? 0 : 16 },
           ]}
           activeOpacity={0.8}
-          onPress={() => onPressBanner && onPressBanner(item)}
+          onPress={() => onPressBanner && onPressBanner([item])}
         >
           <Image source={{ uri: item.image }} style={styles.image} />
           <View style={styles.textOverlay}>
