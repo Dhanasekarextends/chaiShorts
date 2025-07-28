@@ -184,7 +184,6 @@ const VerticalShortsPlayer = props => {
     [current, isPaused, videoLoaded, videoSizes, handleVideoLoad],
   );
 
-  // Always prefer id as string key over index
   const keyExtractor = useCallback((item, index) => index.toString());
 
   return (
