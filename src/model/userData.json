@@ -1,0 +1,71 @@
+{
+  "id": "d9c86ae91f144a0fa5c46d6f514988ff",
+  "displayName": "Dhanasekar Saminathan",
+  "email": "user@email.com",
+  "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ns8jlyyx6dOod1WYr-Pby4PxfWkCL4EgbQ&s",
+  "baseApiUrl": "https://jsonplaceholder.typicode.com/",
+  "createdAt": "2023-08-14T13:05:00Z",
+  "lastLoginAt": "2024-07-27T21:02:17Z",
+  "emailVerified": true,
+  "mobileNumber": "+14155552676",
+  "mobileVerified": false,
+  "subscription": {
+    "tier": "premium",
+    "isActive": true,
+    "expiresAt": "2025-07-28T00:00:00Z",
+    "isTrial": false,
+    "paymentProvider": "stripe",
+    "autoRenew": true
+  },
+  "preferences": {
+    "language": "en-US",
+    "theme": "dark",
+    "autoplayNext": true,
+    "notifications": {
+      "news": true,
+      "recommendations": true,
+      "productUpdates": false
+    }
+  },
+  "parentalControls": {
+    "enabled": false,
+    "maxTierAllowed": "free",
+    "pinSet": false
+  },
+  "bookmarks": [
+    "f1a8fcbf36e044bfaa406eebffefd36e",
+    "b2078f512e7b4da28367e3d957b6c1f1"
+  ],
+  "continueWatching": [
+    {
+      "type": "shortSeries",
+      "id": "cdfed42059f14afc8be5bca13abc5800",
+      "seriesId": "f1a8fcbf36e044bfaa406eebffefd36e",
+      "progress": 87,
+      "lastWatchedAt": "2024-07-27T22:21:02Z"
+    },
+    {
+      "type": "shortStandalone",
+      "id": "c6427ba2d3134a608bef09dd52a005e8",
+      "progress": 80,
+      "lastWatchedAt": "2024-07-26T19:00:00Z"
+    }
+  ],
+  "history": [
+    {
+      "id": "4fe61c6f0b2e427cb8ae99bb95fa4bb7",
+      "type": "shortStandalone",
+      "watchedAt": "2024-07-25T17:22:14Z"
+    }
+  ],
+  "roles": ["user"],
+  "status": "active",
+  "social": {
+    "twitter": "@codewizard",
+    "github": "codewizard-dev"
+  },
+  "meta": {
+    "lastDevice": "iPhone 14",
+    "appVersion": "1.4.0"
+  }
+}

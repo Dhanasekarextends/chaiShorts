@@ -1,0 +1,74 @@
+{
+  "_enums": {
+    "type": ["shortSeries", "shortStandalone"],
+    "subscriptionTier": ["free", "premium", "pro"]
+  },
+  "banners": [
+    {
+      "display": true,
+      "type": "shortStandalone",
+      "id": "71e3f373b5f945129a8be1ead05297dc1",
+      "image": "https://occ-0-2041-3662.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYqGdFwO8Y-vQzTcgW63YC7r6EFqfhDxVgnAcONF3F2UcDzEtNjlj36ueyYVpQawS15t-X9psQLv5hANHWxkv6ZP2MdlBnpp7ebrmFoRCpFH1wt7H9PdnkQWbWgGTs1XeXtmkLmsee_F_TRoOgyamh3WZzwHI2G0KaZGUacr3d12O76s9g49N9vFsD-_IFk.jpg?r=ea5",
+      "title": "Quantum Leap – The 5-Minute Miracle",
+      "subtitle": "Jump in for a quick adventure",
+      "subscriptionTier": "free",
+      "videoUri": "https://videos.pexels.com/video-files/4678261/4678261-hd_1080_1920_25fps.mp4"
+    },
+    {
+      "display": true,
+      "type": "shortStandalone",
+      "id": "b102fa34abad459fb0c803b11985c7022",
+      "image": "https://occ-0-2041-3662.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABX3H5DEc1ZQ-Tu3LjxlpJ4CctXOHdIDyzJg99H34utANxSJB5uw-xhDUuKcmTN2z8HiSGtjN_jjaQf1PS2QRUz-V5QrCvNbZTTw.webp?r=817",
+      "title": "Next Big Idea",
+      "subtitle": "Inspiration in seconds!",
+      "subscriptionTier": "premium",
+      "videoUri": "https://videos.pexels.com/video-files/4678261/4678261-hd_1080_1920_25fps.mp4"
+    },
+    {
+      "display": true,
+      "type": "shortStandalone",
+      "id": "71e3f373b5f945129a8be1ead05297dc3",
+      "image": "https://occ-0-2041-3662.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYqGdFwO8Y-vQzTcgW63YC7r6EFqfhDxVgnAcONF3F2UcDzEtNjlj36ueyYVpQawS15t-X9psQLv5hANHWxkv6ZP2MdlBnpp7ebrmFoRCpFH1wt7H9PdnkQWbWgGTs1XeXtmkLmsee_F_TRoOgyamh3WZzwHI2G0KaZGUacr3d12O76s9g49N9vFsD-_IFk.jpg?r=ea5",
+      "title": "Quantum Leap – The 5-Minute Miracle",
+      "subtitle": "Jump in for a quick adventure",
+      "subscriptionTier": "free",
+      "videoUri": "https://videos.pexels.com/video-files/4678261/4678261-hd_1080_1920_25fps.mp4"
+    },
+    {
+      "display": true,
+      "type": "shortStandalone",
+      "id": "b102fa34abad459fb0c803b11985c7024",
+      "image": "https://occ-0-2041-3662.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABX3H5DEc1ZQ-Tu3LjxlpJ4CctXOHdIDyzJg99H34utANxSJB5uw-xhDUuKcmTN2z8HiSGtjN_jjaQf1PS2QRUz-V5QrCvNbZTTw.webp?r=817",
+      "title": "Next Big Idea",
+      "subtitle": "Inspiration in seconds!",
+      "subscriptionTier": "premium",
+      "videoUri": "https://videos.pexels.com/video-files/4678261/4678261-hd_1080_1920_25fps.mp4"
+    },
+    {
+      "display": true,
+      "type": "shortStandalone",
+      "id": "71e3f373b5f945129a8be1ead05297dc5",
+      "image": "https://occ-0-2041-3662.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYqGdFwO8Y-vQzTcgW63YC7r6EFqfhDxVgnAcONF3F2UcDzEtNjlj36ueyYVpQawS15t-X9psQLv5hANHWxkv6ZP2MdlBnpp7ebrmFoRCpFH1wt7H9PdnkQWbWgGTs1XeXtmkLmsee_F_TRoOgyamh3WZzwHI2G0KaZGUacr3d12O76s9g49N9vFsD-_IFk.jpg?r=ea5",
+      "title": "Quantum Leap – The 5-Minute Miracle",
+      "subtitle": "Jump in for a quick adventure",
+      "subscriptionTier": "free",
+      "videoUri": "https://videos.pexels.com/video-files/4678261/4678261-hd_1080_1920_25fps.mp4"
+    },
+    {
+      "display": true,
+      "type": "shortStandalone",
+      "id": "b102fa34abad459fb0c803b11985c7026",
+      "image": "https://occ-0-2041-3662.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABX3H5DEc1ZQ-Tu3LjxlpJ4CctXOHdIDyzJg99H34utANxSJB5uw-xhDUuKcmTN2z8HiSGtjN_jjaQf1PS2QRUz-V5QrCvNbZTTw.webp?r=817",
+      "title": "Next Big Idea",
+      "subtitle": "Inspiration in seconds!",
+      "subscriptionTier": "premium",
+      "videoUri": "https://videos.pexels.com/video-files/4678261/4678261-hd_1080_1920_25fps.mp4"
+    }
+  ],
+  "widgets": {
+    "continueWatching": { "display": true },
+    "categoryRows": { "display": true },
+    "discoverShortsWidget": { "display": true },
+    "featuredCreatorsWidget": { "display": true }
+  }
+}
