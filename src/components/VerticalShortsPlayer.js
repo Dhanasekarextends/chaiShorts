@@ -6,19 +6,17 @@ import {
   Dimensions,
   StyleSheet,
   TouchableOpacity,
+  Image,
+  ActivityIndicator,
 } from 'react-native';
 import Video from 'react-native-video';
 
 const { height: SCREEN_HEIGHT, width: SCREEN_WIDTH } = Dimensions.get('window');
-
 // Changing input to array of objects with videoUri,title,desc
 function normalizeShortsData(data) {
   if (!data) return [];
-  // If its an array and each item has videoUri return as standalone,continue-watching.
-  if (Array.isArray(data) && data.every(item => item.videoUri)) {
-    return data;
-  }
-
+  // If its an array and each item has videoUri return as standalone,continueWatching.
+  if (Array.isArray(data) && data.every(item => item.videoUri)) return data;
   // If its an array of series objects with shorts array.
   if (Array.isArray(data) && data[0] && Array.isArray(data[0].shorts)) {
     // Flatten all series to a single big shorts array add seriesTitle to help with overlay
@@ -44,8 +42,6 @@ function normalizeShortsData(data) {
 
   // If its a single item with videoUri
   if (data.videoUri) return [data];
-
-  // 5. Otherwise, empty
   return [];
 }
 
@@ -55,25 +51,23 @@ const VerticalShortsPlayer = ({ data }) => {
   const flatListRef = useRef(null);
   const [isPaused, setIsPaused] = useState(false);
 
-  // Aspect ratio based sizing for video
+  const [videoLoaded, setVideoLoaded] = useState({});
   const [videoSizes, setVideoSizes] = useState({});
+
   const onViewableItemsChanged = useRef(({ viewableItems }) => {
-    if (viewableItems.length > 0) {
-      setCurrent(viewableItems[0].index);
-    }
+    if (viewableItems.length > 0) setCurrent(viewableItems[0].index);
   }).current;
   const viewabilityConfig = { itemVisiblePercentThreshold: 85 };
 
-  // Aspect ratio based vide size
-  const handleVideoLoad = id => e => {
+  const handleVideoLoad = key => e => {
+    setVideoLoaded(prev => ({ ...prev, [key]: true }));
     const { width = SCREEN_WIDTH, height = SCREEN_HEIGHT } =
       e.naturalSize || {};
     if (width && height) {
       const vidAspect = width / height;
       const screenAspect = SCREEN_WIDTH / SCREEN_HEIGHT;
-      let finalWidth = SCREEN_WIDTH;
-      let finalHeight = SCREEN_HEIGHT;
-
+      let finalWidth = SCREEN_WIDTH,
+        finalHeight = SCREEN_HEIGHT;
       // Below function is if the video is wider than screen, scale by width. But can we removed if we restrict it in admin login
       if (vidAspect > screenAspect) {
         finalWidth = SCREEN_WIDTH;
@@ -84,19 +78,85 @@ const VerticalShortsPlayer = ({ data }) => {
       }
       setVideoSizes(prev => ({
         ...prev,
-        [id]: { width: finalWidth, height: finalHeight },
+        [key]: { width: finalWidth, height: finalHeight },
       }));
     }
   };
 
+  const renderOverLay = (item, showSeriesInfo, key) => {
+    return (
+      <View style={styles.overlay}>
+        {showSeriesInfo && (
+          <>
+            <Text style={styles.seriesTitle}>{item.seriesTitle}</Text>
+            {item.seriesTagline && (
+              <Text style={styles.seriesTagline}>{item.seriesTagline}</Text>
+            )}
+          </>
+        )}
+        <Text style={styles.title}>
+          {item.title || item.episodeTitle || 'Short'}
+        </Text>
+        {item.description ? (
+          <Text style={styles.desc}>{item.description}</Text>
+        ) : null}
+        {item.episodeNumber != null && (
+          <Text style={styles.ep}>Episode: {item.episodeNumber}</Text>
+        )}
+      </View>
+    );
+  };
+
+  const renderPlaceHolderThumbnail = (thumbUri, key, size) => {
+    //   Poster Image until loaded
+    return (
+      !videoLoaded[key] &&
+      (thumbUri ? (
+        <Image
+          source={{ uri: thumbUri }}
+          style={[
+            styles.video,
+            {
+              width: size.width,
+              height: size.height,
+              alignSelf: 'center',
+              position: 'absolute',
+            },
+          ]}
+          resizeMode="cover"
+          blurRadius={0}
+        />
+      ) : (
+        <View
+          style={[
+            styles.video,
+            {
+              backgroundColor: '#222',
+              position: 'absolute',
+              width: size.width,
+              height: size.height,
+              alignSelf: 'center',
+              justifyContent: 'center',
+              alignItems: 'center',
+            },
+          ]}
+        >
+          <ActivityIndicator color="#fff" size="large" />
+        </View>
+      ))
+    );
+  };
+
   const renderItem = ({ item = {}, index }) => {
-    console.log('****TEST_ITEM', item);
-    const size = videoSizes[item.id || item.episodeNumber || index] || {
+    const key = item.id || item.videoUri || item.episodeNumber || index;
+    const size = videoSizes[key] || {
       width: SCREEN_WIDTH,
       height: SCREEN_HEIGHT,
     };
-
     const showSeriesInfo = !!item.seriesTitle;
+
+    const thumbUri =
+      item.thumbnail || item.image || item.seriesImage || undefined;
 
     return (
       <View
@@ -110,6 +170,7 @@ const VerticalShortsPlayer = ({ data }) => {
           activeOpacity={0.8}
           onPress={() => setIsPaused(val => !val)}
         >
+          {renderPlaceHolderThumbnail(thumbUri, key, size)}
           <Video
             source={{ uri: item.videoUri }}
             style={{
@@ -122,29 +183,13 @@ const VerticalShortsPlayer = ({ data }) => {
             paused={current !== index || isPaused}
             muted={false}
             controls={false}
-            onLoad={handleVideoLoad(item.id || item.episodeNumber || index)}
+            onLoad={handleVideoLoad(key)}
             ignoreSilentSwitch="ignore"
+            poster={thumbUri || undefined}
+            posterResizeMode="cover"
           />
         </TouchableOpacity>
-        <View style={styles.overlay}>
-          {showSeriesInfo && (
-            <>
-              <Text style={styles.seriesTitle}>{item.seriesTitle}</Text>
-              {item.seriesTagline && (
-                <Text style={styles.seriesTagline}>{item.seriesTagline}</Text>
-              )}
-            </>
-          )}
-          <Text style={styles.title}>
-            {item.title || item.episodeTitle || 'Short'}
-          </Text>
-          {item.description ? (
-            <Text style={styles.desc}>{item.description}</Text>
-          ) : null}
-          {item.episodeNumber != null && (
-            <Text style={styles.ep}>Episode: {item.episodeNumber}</Text>
-          )}
-        </View>
+        {renderOverLay(item, showSeriesInfo, key)}
       </View>
     );
   };
@@ -153,7 +198,7 @@ const VerticalShortsPlayer = ({ data }) => {
     <FlatList
       ref={flatListRef}
       data={flatShorts}
-      keyExtractor={(item, index) => index.toString()}
+      keyExtractor={(_, index) => index.toString()}
       renderItem={renderItem}
       pagingEnabled
       showsVerticalScrollIndicator={false}
@@ -180,6 +225,11 @@ const styles = StyleSheet.create({
     height: SCREEN_HEIGHT,
     backgroundColor: '#111',
     justifyContent: 'flex-end',
+  },
+  video: {
+    ...StyleSheet.absoluteFillObject,
+    width: '100%',
+    height: SCREEN_HEIGHT,
   },
   overlay: {
     position: 'absolute',
