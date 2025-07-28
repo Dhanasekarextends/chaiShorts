@@ -203,12 +203,13 @@ const VerticalShortsPlayer = props => {
         offset: SCREEN_HEIGHT * index,
         index,
       })}
-      initialNumToRender={2}
-      windowSize={4}
+      initialNumToRender={3}
+      maxToRenderPerBatch={5}
+      windowSize={5}
       style={styles.list}
       onEndReachedThreshold={0.8}
       onEndReached={onEndReached}
-      removeClippedSubviews
+      removeClippedSubviews={true}
     />
   );
 };
